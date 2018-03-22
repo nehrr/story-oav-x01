@@ -1,4 +1,7 @@
+import Foundation
+
 class ConveyorBelt: Furniture {
+
   var _isBusy: Bool = false
   private var current: Object? = nil
 
@@ -29,7 +32,18 @@ class ConveyorBelt: Furniture {
   }
 
   func fetch() {
-    print("Here comes a new object ~~ X ~~")
+    let classes: [String] = [
+      "Pony",
+      "OneArmedSoldier",
+      "Box",
+      "GiftWrap"
+    ]
+
+    let randomIndex = classes[Int(arc4random_uniform(UInt32(classes.count)))]
+    let obj = NSClassFromString(randomIndex) as? Object
+
+
+    print("Here comes a new object ~~ \(type(of: obj)) ~~")
   }
 
   func out() {

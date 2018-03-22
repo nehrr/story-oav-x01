@@ -43,8 +43,8 @@ bellamy.put(furniture: table, obj: paper)
 bellamy.put(furniture: table, obj: pony)
 bellamy.put(furniture: table, obj: box)
 
-// conveyor.fetch()
-// conveyor.fetch()
+conveyor.fetch()
+conveyor.fetch()
 //
 // let obj: Object? = bellamy.take(furniture: conveyor)
 // bellamy.put(furniture: table, obj: obj)
