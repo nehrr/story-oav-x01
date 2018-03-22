@@ -25,7 +25,7 @@ bellamy.pack(packaging: paper, toy: pony)
 
 var toy: Toy! = bellamy.unpack(packaging: paper)
 print("Is the toy our pony? - \(toy as! Pony === pony)")
-var r: Toy? = bellamy.unpack(packaging: paper)
-print("Is the toy no more present? - \(r == nil)")
+// var r: Toy? = bellamy.unpack(packaging: paper)
+// print("Is the toy no more present? - \(r == nil)")
 
 print("<<-- End step.02:\n")

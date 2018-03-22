@@ -7,7 +7,7 @@ class Packaging {
       return _isOpen
     }
     set(value) {
-      self.isOpen = value
+      self._isOpen = value
     }
   }
 

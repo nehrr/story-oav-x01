@@ -35,16 +35,16 @@ class Henchman {
     print("Yeaaaah! Just packing the toy ~~ \(toy.type) ~~")
   }
 
-  func unpack(packaging: Packaging) {
-    if (!packaging.isOpen && packaging.toy == nil) {
+  func unpack(packaging: Packaging) -> Toy? {
+    if (packaging.isOpen || packaging.toy == nil) {
       print("Sorry this package is already empty")
-      return
+      return nil
     }
 
-    var myToy = packaging.toy
-    
-    packaging.isOpen = false
-    packaging.toy = nil
+    let myToy: Toy = packaging.toy!
+
+    // packaging.isOpen = false
+    // packaging.toy = nil
     print("Ooooooh! Just unpacking the toy ~~ \(myToy.type) ~~")
 
     return myToy
