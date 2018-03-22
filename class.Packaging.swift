@@ -1,4 +1,4 @@
-class Packaging {
+class Packaging: Object {
   var _isOpen: Bool
   var _toy: Toy?
 
