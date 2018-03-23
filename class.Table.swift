@@ -21,9 +21,10 @@ class Table: Furniture {
 
   func look() {
     print("[", terminator: "")
-    for item in stack.content {
-        print("\(type(of: item))", terminator: ", ")
+    for (i, item) in stack.content.enumerated() {
+      let end = i == stack.content.count - 1 ? "" : ", "
+        print("\(type(of: item))", terminator: end)
     }
-    print("]\n", terminator: "")
+    print("]\n")
   }
 }

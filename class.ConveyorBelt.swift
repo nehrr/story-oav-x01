@@ -75,6 +75,8 @@ class ConveyorBelt: Furniture {
   }
 
   func look() {
-    print("[\(type(of: self.current!))]\n")
+    if let obj: Object = self.current {
+      print("[\(type(of: obj))]\n")
+    }
   }
 }

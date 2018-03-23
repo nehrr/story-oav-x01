@@ -60,9 +60,9 @@ print("-->> Running step.03:")
 var table: Table = TableFactory.makeTable()
 var conveyor: ConveyorBelt = ConveyorBeltFactory.makeConveyorBelt()
 
-// table.look()
-// conveyor.look()
-//
+table.look()
+conveyor.look()
+
 bellamy.put(furniture: table, obj: paper)
 bellamy.put(furniture: table, obj: pony)
 bellamy.put(furniture: table, obj: box)
@@ -71,6 +71,7 @@ table.look()
 
 conveyor.fetch()
 conveyor.look()
+conveyor.out()
 
 // let obj: Object? = bellamy.take(furniture: conveyor)
 // bellamy.put(furniture: table, obj: obj)
