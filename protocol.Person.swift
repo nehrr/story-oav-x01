@@ -1,0 +1,3 @@
+protocol Person {
+  func get()
+}
