@@ -18,4 +18,12 @@ class Table: Furniture {
   func take() -> Object? {
     return stack.pop()
   }
+
+  func look() {
+    print("[", terminator: "")
+    for item in stack.content {
+        print("\(type(of: item))", terminator: ", ")
+    }
+    print("]\n", terminator: "")
+  }
 }

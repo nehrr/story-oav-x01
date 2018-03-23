@@ -34,19 +34,48 @@ print("Is the toy no more present? - \(r == nil)")
 print("<<-- End step.02:\n")
 
 // -- step.03
+// print("-->> Running step.03:")
+//
+// var table: Table = Table()
+// var conveyor: ConveyorBelt = ConveyorBelt()
+//
+// bellamy.put(furniture: table, obj: paper)
+// bellamy.put(furniture: table, obj: pony)
+// bellamy.put(furniture: table, obj: box)
+//
+// conveyor.fetch()
+// conveyor.fetch()
+//
+// table.look()
+// conveyor.look()
+//
+// // let obj: Object? = bellamy.take(furniture: conveyor)
+// // bellamy.put(furniture: table, obj: obj)
+//
+// print("<<-- End step.03")
+
+// -- step.03
 print("-->> Running step.03:")
 
-var table: Table = Table()
-var conveyor: ConveyorBelt = ConveyorBelt()
+var table: Table = TableFactory.makeTable()
+var conveyor: ConveyorBelt = ConveyorBeltFactory.makeConveyorBelt()
 
+// table.look()
+// conveyor.look()
+//
 bellamy.put(furniture: table, obj: paper)
 bellamy.put(furniture: table, obj: pony)
 bellamy.put(furniture: table, obj: box)
 
+table.look()
+
 conveyor.fetch()
-conveyor.fetch()
-//
+conveyor.look()
+
 // let obj: Object? = bellamy.take(furniture: conveyor)
 // bellamy.put(furniture: table, obj: obj)
-//
-// print("<<-- End step.03")
+
+conveyor.look()
+table.look()
+
+print("<<-- End step.03")

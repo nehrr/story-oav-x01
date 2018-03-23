@@ -9,6 +9,10 @@ struct Stack<T> {
         return array.count
     }
 
+    var content: [T] {
+      return self.array
+    }
+
     mutating func push(_ val: T) {
         array.append(val)
     }

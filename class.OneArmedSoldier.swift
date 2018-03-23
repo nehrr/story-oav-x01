@@ -6,12 +6,16 @@ case IRON_BAR
 }
 
 class OneArmedSoldier: Figurine {
-  let _name: String
-  let _weapon: Weapons
+  var _name: String
+  var _weapon: Weapons
   var type: String {
     get {
       return String(describing: OneArmedSoldier.self)
     }
+  }
+
+  convenience init() {
+    self.init(name: "Clone", weapon: .IRON_BAR)
   }
 
   init(name: String, weapon: Weapons) {

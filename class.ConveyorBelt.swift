@@ -12,7 +12,7 @@ class ConveyorBelt: Furniture {
   func put(obj: Object) -> Bool {
     if (!_isBusy) {
       self.current = obj
-      _isBusy = true
+      self._isBusy = true
       return true
     } else {
       print("Sorry, the belt is busy!")
@@ -39,14 +39,42 @@ class ConveyorBelt: Furniture {
       "GiftWrap"
     ]
 
-    let randomIndex = classes[Int(arc4random_uniform(UInt32(classes.count)))]
-    let obj = NSClassFromString(randomIndex) as? Object
+    let aClassName = classes[Int(arc4random_uniform(UInt32(classes.count)))]
 
+    switch aClassName {
 
-    print("Here comes a new object ~~ \(type(of: obj)) ~~")
+    case "OneArmedSoldier":
+      self.current = OneArmedSoldier()
+      break
+    case "Box":
+      self.current = Box()
+      break
+    case "GiftWrap":
+      self.current = GiftWrap()
+      break
+
+    default:
+      self.current = Pony()
+    }
+
+    // Instanciate a class from a String
+    // let aClass = NSClassFromString(aClassName) as! Object.Type
+    // self.current = aClass.init()
+
+    print("Here comes a new object ~~ \(type(of: self.current!)) ~~\n")
+
   }
 
   func out() {
-    print("Goodbye my lover, goodbye ~~ X ~~, you're beautiful")
+    if (self.current != nil) {
+      print("Goodbye my lover, goodbye ~~ \(type(of: self.current!)) ~~, you're beautiful\n")
+      self.current = nil
+      self._isBusy = false
+    }
+
+  }
+
+  func look() {
+    print("[\(type(of: self.current!))]\n")
   }
 }
