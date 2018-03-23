@@ -84,10 +84,8 @@ print("<<-- End step.03")
 // -- step.04
 print("-->> Running step.04:")
 
-var sugar: Sugar = Sugar(name: "Elf")
-var sugar2: Sugar = Sugar(name: "test")
-print(sugar._name)
-print(sugar2._name)
+// var sugar: Sugar = Sugar(name: "Elf")
+
 // conveyor.out(person: sugar)
 // conveyor.out(person: sugar)
 // conveyor.out(person: sugar)

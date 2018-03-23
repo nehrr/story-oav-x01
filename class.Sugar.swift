@@ -23,9 +23,12 @@ class Sugar: Person {
   private init() {
   }
 
-  init(name: String) {
-    Sugar.instance._name = name
-  }
+  // init(name: String) {
+  //   if (instance == nil) {
+  //     instance = Sugar()
+  //     instance._name = name
+  //   }
+  // }
 
   func get() {
 

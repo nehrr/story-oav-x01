@@ -1,5 +1,5 @@
 struct Queue<T> {
-  private var array = [T]()
+  private var array: Array<T> = []
 
   var isEmpty: Bool {
     return array.isEmpty
@@ -18,10 +18,6 @@ struct Queue<T> {
   }
 
   mutating func pop() -> T? {
-    if !array.isEmpty {
-      return array.removeFirst()
-    } else {
-      return nil
-    }
+    return array.removeFirst()
   }
 }
